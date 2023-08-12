@@ -1,2 +1,5 @@
 # AS400-API
-Juste simplest Restfull API for AS400 DB
+Just simplest Restfull API for AS400 DB
+'''
+
+uvicorn main:app --reload --port 45888 --host 0.0.0.0
