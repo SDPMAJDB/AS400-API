@@ -8,7 +8,11 @@ class Query(BaseModel):
     type: str
     query: str
 
-app = FastAPI()
+app = FastAPI(
+    title="DB400 API",
+    description="API for executing queries on IBM i DB2 database",
+    version="1.0.0",
+)
 db400 = DB400()
 
 @app.post("/execute")
