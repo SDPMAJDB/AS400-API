@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  as400api:
+    image: ralphi2811/as400api:latest
+    restart: always
+    ports:
+      - "45888:45888"
+    environment:
+      - AS400_URL=
+      - AS400_USER=
+      - AS400_PASSWORD=
+      - VUSION_URL=
+      - VUSION_APIKEY=
+      - SOC_NUM=
+      - SOC_TYPE=
+      - CRONTAB_APP=
+      - UPTIME_URL=
+      - TZ=
