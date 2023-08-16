@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from src.db_request import DB400, DB400Error
 from src.db_connect import ConnectionError
 from src.secure import Secure
+from src.install import install
 
 class Query(BaseModel):
     type: str
@@ -14,6 +15,9 @@ app = FastAPI(
     version="1.0.0",
 )
 db400 = DB400()
+
+inst = install()
+inst.install()
 
 @app.post("/execute")
 def execute_query(query: Query, authorization: str = Depends(Secure.verify_api_key)):

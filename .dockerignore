@@ -1,0 +1,6 @@
+main.test.py
+/env
+/__pycache__
+Dockerfile
+src/__pycache__
+.gitignore
